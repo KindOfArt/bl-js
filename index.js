@@ -71,18 +71,39 @@
 //иначе выводить строку "Неверный пароль!"
 let askLogin = prompt('login');
 
-if (askLogin === 'Админ') {
-    console.log(askLogin);
-    const askPass = prompt('pass');
-    if (askPass === "Я главный") {
+//if (askLogin === 'Админ') {
+  //  console.log(askLogin);
+    //const askPass = prompt('pass');
+    //if (askPass === "Я главный") {
+      //  console.log('Здравствуйте!');
+    //}
+    //else if (askPass === null) {
+      //  console.log('Отменено');
+    //}
+    //else console.log('Неверный пароль!');
+//} else if (askLogin === null) {
+  //console.log('Отменено');
+//} else {
+ // console.log('Я вас не знаю');
+//}
+switch (askLogin) {
+  
+  case 'Админ':
+  const askPass = prompt('pass')
+    switch (askPass) {
+      case "Я главный":
         console.log('Здравствуйте!');
-    }
-    else if (askPass === null) {
+        break
+      case null:
         console.log('Отменено');
+        break
+      default:console.log('Неверный пароль!');
     }
-    else console.log('Неверный пароль!');
-} else if (askLogin === null) {
+   break;
+ 
+    case null:
   console.log('Отменено');
-} else {
-  console.log('Я вас не знаю');
+    break;
+  default:
+     console.log('Я вас не знаю');
 }
