@@ -138,8 +138,32 @@
 //введёт число больше 100, либо не нажмет кнопку
 //Отмена в prompt
 
-    let randomNumber = prompt("Число быльше 100");
-while (randomNumber < 100 && randomNumber !== null) {
-    randomNumber = prompt("Число быльше 100");
-}
-console.log(randomNumber);
+//     let randomNumber = prompt("Число быльше 100");
+// while (randomNumber < 100 && randomNumber !== null) {
+//     randomNumber = prompt("Число быльше 100");
+// }
+// console.log(randomNumber);
+
+
+
+//Дана строка, состоящая из символов, например, 'abcde'.
+// Проверьте, что первым символом этой строки является буква 'a'.
+// Если это так - выведите 'да', в противном случае выведите 'нет'.
+
+// const string = "abcde";
+
+// console.log(string[0]);
+// if (string[0] === "a") {
+//     console.log("Так");
+// } else {
+//     console.log("Ні!");
+// }
+// const firstLetter = string[0]
+// let message = "Ні!"
+// firstLetter === "a" ? message = "Так." : message
+// console.log(message);
+
+
+// const firstLetter = string.startsWith("a")
+// firstLetter ? message = "Так." : message
+// console.log(message);
