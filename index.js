@@ -33,17 +33,25 @@
 //3. Напишите цикл, который выводит в консоль
 //числа от max до min по убыванию
 // Додайте все четные числа от min до max
-const max = 50;
-const min = 23;
-let totalSum = 0;
+// 
 
-for (let i = max; i >= min; i -= 1) {
-  //   if (i % 2 === 0) {
-  //     totalSum += i;
-  //   }
-  if (i % 2 !== 0) {
-    continue;
-  }
-  totalSum += i;
+// 8. В переменной min лежит число от 0 до 59.
+// Определите в какую четверть часа попадает
+// это число(в первую, вторую, третью или четвертую).
+let min = 32;
+if (min <= 15)
+{
+  console.log("перша четверть")
+  
 }
-console.log(totalSum);
+else if (min > 15 && min <= 30)
+{
+  console.log("2 четверть")
+}
+else if (min > 30 && min <= 45)
+{
+  console.log("3 четверть")
+}
+else {
+  console.log("4 четверть")
+  }
