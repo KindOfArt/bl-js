@@ -33,7 +33,7 @@
 //3. Напишите цикл, который выводит в консоль
 //числа от max до min по убыванию
 // Додайте все четные числа от min до max
-// 
+//
 
 // 8. В переменной min лежит число от 0 до 59.
 // Определите в какую четверть часа попадает
@@ -42,7 +42,7 @@
 // if (min <= 15)
 // {
 //   console.log("перша четверть")
-  
+
 // }
 // else if (min > 15 && min <= 30)
 // {
@@ -69,41 +69,60 @@
 //Если введён пароль "Я главный",
 //то вывести строку "Здравствуйте!"
 //иначе выводить строку "Неверный пароль!"
-let askLogin = prompt('login');
+// let askLogin = prompt('login');
 
 //if (askLogin === 'Админ') {
-  //  console.log(askLogin);
-    //const askPass = prompt('pass');
-    //if (askPass === "Я главный") {
-      //  console.log('Здравствуйте!');
-    //}
-    //else if (askPass === null) {
-      //  console.log('Отменено');
-    //}
-    //else console.log('Неверный пароль!');
-//} else if (askLogin === null) {
-  //console.log('Отменено');
-//} else {
- // console.log('Я вас не знаю');
+//  console.log(askLogin);
+//const askPass = prompt('pass');
+//if (askPass === "Я главный") {
+//  console.log('Здравствуйте!');
 //}
-switch (askLogin) {
-  
-  case 'Админ':
-  const askPass = prompt('pass')
-    switch (askPass) {
-      case "Я главный":
-        console.log('Здравствуйте!');
-        break
-      case null:
-        console.log('Отменено');
-        break
-      default:console.log('Неверный пароль!');
-    }
-   break;
- 
-    case null:
-  console.log('Отменено');
-    break;
-  default:
-     console.log('Я вас не знаю');
-}
+//else if (askPass === null) {
+//  console.log('Отменено');
+//}
+//else console.log('Неверный пароль!');
+//} else if (askLogin === null) {
+//console.log('Отменено');
+//} else {
+// console.log('Я вас не знаю');
+//}
+// switch (askLogin) {
+
+//   case 'Админ':
+//   const askPass = prompt('pass')
+//     switch (askPass) {
+//       case "Я главный":
+//         console.log('Здравствуйте!');
+//         break
+//       case null:
+//         console.log('Отменено');
+//         break
+//       default:console.log('Неверный пароль!');
+//     }
+//    break;
+
+//     case null:
+//   console.log('Отменено');
+//     break;
+//   default:
+//      console.log('Я вас не знаю');
+// }
+
+// ------------------------------------------------------------------------
+// При загрузке страницы пользователю предлагается
+//в prompt ввести число. Ввод добавляется к значению
+//переменной total.
+//Операция ввода числа продолжается до тех пор,
+//пока пользователь не нажмет кнопку Cancel в prompt.
+//После того как пользователь прекратил ввод нажав на
+//кнопку Cancel, показать alert со строкой "Общая сумма введенных чисел равна [число]."
+//Делать проверку,что пользователь ввел именно число,
+// //а не произвольный набор символов, не нужно.
+
+// let number = prompt('Enter number');
+// let total = 0;
+// while (number) {
+//   total += Number(number);
+//   number = prompt('Enter number');
+// }
+// console.log(total);
