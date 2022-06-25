@@ -237,12 +237,27 @@
 //   } else return 'error';
 // }
 
-function min(a, b) {
-  if (typeof a !== 'number' || typeof b !== 'number') {
-    return 'error';
-  } else {
-    return a > b ? b : a;
+// function min(a, b) {
+//   if (typeof a !== 'number' || typeof b !== 'number') {
+//     return 'error';
+//   } else {
+//     return a > b ? b : a;
+//   }
+// }
+
+// console.log(min('5454', 9));
+
+//Напишите функцию logItems(array) которая принимает
+//массив и использует цикл for, который для каждого
+//элемента массива будет выводить сообщение в формате
+//<номер элемента> - <значение элемента>
+//Нумерация элементов должна начинаться с 1.
+//['Джаз', 'Блюз', 'Рок-н-ролл', 'Регги', 'Рэп']
+
+function logItems(array) {
+  for (let i = 0; i < array.length; i += 1) {
+    console.log(`${i + 1} - ${array[i]}`);
   }
 }
 
-console.log(min('5454', 9));
+logItems(['Джаз', 'Блюз', 'Рок-н-ролл', 'Регги', 'Рэп']);
