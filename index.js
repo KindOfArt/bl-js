@@ -299,16 +299,42 @@
 //аргументов и возвращает их среднее значение.
 //Добавить проверку, что аргументы это числа.
 
-const caculculateAverage = function (...arks) {
-  let total = 0
-  for (const number of arks) {
+// const caculculateAverage = function (...arks) {
+//   let total = 0
+//   for (const number of arks) {
   
-    if (typeof number !== "number") {
-      continue
-    }
-      total += number
-  }
-    return total / arks.length
-  }
+//     if (typeof number !== "number") {
+//       continue
+//     }
+//       total += number
+//   }
+//     return total / arks.length
+//   }
 
-console.log(caculculateAverage(1,2,3));
+// console.log(caculculateAverage(1, 2, 3));
+
+
+// /////////////////////////////
+
+//Напиши функцию findLongestWord(string)
+//которая принимает произвольную строку
+//состоящую только из слов разделенных
+//пробелом (параметр string)
+//и возвращает самое длинное слово в этой строке
+
+
+function findLongestWord(string) {
+    const words = string.split(" ");
+    let longestWord = words[0];
+
+    console.log(words);
+
+    for (const word of words) {
+    if (longestWord.length < word.length) {
+        longestWord = word;
+    }
+}
+return longestWord;
+}
+
+console.log(findLongestWord("Hello world from student GOIT"));
