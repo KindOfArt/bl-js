@@ -196,18 +196,53 @@
 //Удалите первый элемент массива и выведите его в консоль.
 //Вставьте «Рэп» и «Регги» в начало массива.
 
-const styles = ['Джаз', 'Блюз'];
+// const styles = ['Джаз', 'Блюз'];
 
-console.log(styles.push('«Рок-н-ролл»'));
+// console.log(styles.push('«Рок-н-ролл»'));
 
-const index = styles.indexOf('Блюз');
+// const index = styles.indexOf('Блюз');
 
-styles.splice(index, 1, 'Классика');
+// styles.splice(index, 1, 'Классика');
 
-console.log(styles.shift());
+// console.log(styles.shift());
 
-styles.unshift('Реп', 'Регги');
+// styles.unshift('Реп', 'Регги');
 
-// styles[1] = 'Классика';
+// // styles[1] = 'Классика';
 
-console.log(styles);
+// console.log(styles);
+
+//======================
+//Напишите функцию min(a, b), которая возвращает
+//меньшее из чисел a, b
+//нужно добавить проверку, что функция получает числа
+
+// function min(a, b) {
+//   return Math.min(a, b);
+// }
+
+// function min(a, b) {
+//   if (a > b) {
+//     return b;
+//   } else if (a < b) {
+//     return a;
+//   } else {
+//     return 'Они равны';
+//   }
+// }
+
+// function min(a, b) {
+//   if (typeof a === 'number' && typeof b === 'number') {
+//     return a > b ? b : a;
+//   } else return 'error';
+// }
+
+function min(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    return 'error';
+  } else {
+    return a > b ? b : a;
+  }
+}
+
+console.log(min('5454', 9));
