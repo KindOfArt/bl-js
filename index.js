@@ -262,12 +262,10 @@
 
 // logItems(['Джаз', 'Блюз', 'Рок-н-ролл', 'Регги', 'Рэп']);
 
-
 //Напиши функцию findSmallerNumber(numbers)
 //которая ищет самое маленькое число в массиве
 //Добавь проверку что функция получает массив
 //const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
-
 
 // const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
@@ -302,7 +300,7 @@
 // const caculculateAverage = function (...arks) {
 //   let total = 0
 //   for (const number of arks) {
-  
+
 //     if (typeof number !== "number") {
 //       continue
 //     }
@@ -313,7 +311,6 @@
 
 // console.log(caculculateAverage(1, 2, 3));
 
-
 // /////////////////////////////
 
 //Напиши функцию findLongestWord(string)
@@ -322,19 +319,39 @@
 //пробелом (параметр string)
 //и возвращает самое длинное слово в этой строке
 
+// function findLongestWord(string) {
+//     const words = string.split(" ");
+//     let longestWord = words[0];
 
-function findLongestWord(string) {
-    const words = string.split(" ");
-    let longestWord = words[0];
+//     console.log(words);
 
-    console.log(words);
+//     for (const word of words) {
+//     if (longestWord.length < word.length) {
+//         longestWord = word;
+//     }
+// }
+// return longestWord;
+// }
 
-    for (const word of words) {
-    if (longestWord.length < word.length) {
-        longestWord = word;
-    }
+// console.log(findLongestWord("Hello world from student GOIT"));
+// =====================================
+//Напишите функцию findTheColor()
+//которая принимает название цвета
+//определяет его наличие в массиве
+//если цвет есть, усталавливет его как фон документа
+//если цвета нет выводит console.error('Такой цвет не найден');
+//и устанавливает цвет документа красный
+// document.body.style.background = 'red';
+const colors = ['blue', 'yellow', 'olive', 'fuchsia', 'lime', 'aqua', 'maroon'];
+findTheColor('black');
+
+function findTheColor(color) {
+  const inArr = colors.includes(color);
+  if (inArr) {
+    document.body.style.background = color;
+    return;
+  }
+
+  document.body.style.background = 'red';
+  console.error('Такой цвет не найден');
 }
-return longestWord;
-}
-
-console.log(findLongestWord("Hello world from student GOIT"));
