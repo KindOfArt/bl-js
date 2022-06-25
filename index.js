@@ -127,7 +127,6 @@
 // }
 // console.log(total);
 
-
 // --------------------7 ------------
 
 //7. Напишите цикл, который предлагает ввести
@@ -143,8 +142,6 @@
 //     randomNumber = prompt("Число быльше 100");
 // }
 // console.log(randomNumber);
-
-
 
 //Дана строка, состоящая из символов, например, 'abcde'.
 // Проверьте, что первым символом этой строки является буква 'a'.
@@ -163,7 +160,33 @@
 // firstLetter === "a" ? message = "Так." : message
 // console.log(message);
 
-
 // const firstLetter = string.startsWith("a")
 // firstLetter ? message = "Так." : message
 // console.log(message);
+// Елси число делиться на 3 возвращать
+//fizz если делиться на 5 возвращать buzz
+//елси делиться на 3 и на 5 возвращить fizzbuzz
+// function fizzBuzz(num) {
+//      for (let i = 1; i <= num; i++) {
+//            }
+
+// }
+// Елси число делиться на 3 возвращать
+//fizz если делиться на 5 возвращать buzz
+//елси делиться на 3 и на 5 возвращить fizzbuzz
+// =============================================================================
+function fizzBuzz(num) {
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log('fizzBuzz');
+    } else if (i % 3 === 0) {
+      console.log('fizz');
+    } else if (i % 5 === 0) {
+      console.log('buzz');
+    } else {
+      console.log(i);
+    }
+  }
+}
+fizzBuzz(125);
+// =============================================================================
