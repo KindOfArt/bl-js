@@ -254,10 +254,43 @@
 //Нумерация элементов должна начинаться с 1.
 //['Джаз', 'Блюз', 'Рок-н-ролл', 'Регги', 'Рэп']
 
-function logItems(array) {
-  for (let i = 0; i < array.length; i += 1) {
-    console.log(`${i + 1} - ${array[i]}`);
-  }
-}
+// function logItems(array) {
+//   for (let i = 0; i < array.length; i += 1) {
+//     console.log(`${i + 1} - ${array[i]}`);
+//   }
+// }
 
-logItems(['Джаз', 'Блюз', 'Рок-н-ролл', 'Регги', 'Рэп']);
+// logItems(['Джаз', 'Блюз', 'Рок-н-ролл', 'Регги', 'Рэп']);
+
+
+//Напиши функцию findSmallerNumber(numbers)
+//которая ищет самое маленькое число в массиве
+//Добавь проверку что функция получает массив
+//const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+
+
+// const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+
+// function findSmallerNumber(numbers) {
+//   return Math.min(...numbers)
+// }
+
+// console.log(findSmallerNumber((numbers)));
+
+// const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+
+// function findSmallerNumber(numbers) {
+//   if (!Array.isArray(numbers)) {
+//     return 'Error, not Array'
+//   }
+//   let minNumber = numbers[0];
+//   for (const number of numbers) {
+//     if (number < minNumber) {
+//       minNumber = number;
+//     }
+
+//   }
+//   return minNumber;
+// }
+
+// console.log(findSmallerNumber(56692));
