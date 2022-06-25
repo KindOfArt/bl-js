@@ -294,3 +294,21 @@
 // }
 
 // console.log(findSmallerNumber(56692));
+// Напишите функцию caculculateAverage()
+// //которая принимает произвольное количество
+//аргументов и возвращает их среднее значение.
+//Добавить проверку, что аргументы это числа.
+
+const caculculateAverage = function (...arks) {
+  let total = 0
+  for (const number of arks) {
+  
+    if (typeof number !== "number") {
+      continue
+    }
+      total += number
+  }
+    return total / arks.length
+  }
+
+console.log(caculculateAverage(1,2,3));
