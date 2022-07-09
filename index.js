@@ -313,6 +313,7 @@
 
 // ==============================================================================
 
+
 // const vehicles = [
 //     { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
 //     { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
@@ -348,9 +349,11 @@ const vehicles = [
     { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
     { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
 ];
+
 const getSortedCarsOnSale = cars => {
     return cars.filter(element => element.onSale).sort((a,b) => b.price - a.price)
 };
 
 console.log(getSortedCarsOnSale(vehicles ));
 console.log(getSortedCarsOnSale(vehicles ));
+
