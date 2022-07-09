@@ -441,3 +441,23 @@
 //     // console.log(arr);
 // });
 // console.log(positiveValues)
+
+// ======================================================
+function ownFind(array, callback) {
+    for (let i = 0; i < array.length; i += 1) {
+        if (callback(array[i], i, array)) {
+            return array[i]
+        };
+    }
+    return undefined;
+}
+
+
+const colorPickerOptions = [
+    { label: 'red', color: '#F44336' },
+    { label: 'green', color: '#4CAF50' },
+    { label: 'blue', color: '#2196F3' },
+    { label: 'pink', color: '#E91E63' },
+    { label: 'indigo', color: '#3F51B5' },
+];
+console.log(ownFind(colorPickerOptions, (option) => { return (option.label === 'blue'); }));
