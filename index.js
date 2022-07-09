@@ -359,22 +359,22 @@
 // ====================================================================
 //Напишите функцию unique(arr), которая возвращает массив,
 //содержащий только уникальные элементы arr.
-const words = [
-  'HTML',
-  'CSS',
-  'JS',
-  'React',
-  'JS',
-  'CSS',
-  'JS',
-  'Node.js',
-  'JS',
-  'React',
-  'CSS',
-  'React',
-  'HTML',
-  'Node.js',
-];
+// const words = [
+//   'HTML',
+//   'CSS',
+//   'JS',
+//   'React',
+//   'JS',
+//   'CSS',
+//   'JS',
+//   'Node.js',
+//   'JS',
+//   'React',
+//   'CSS',
+//   'React',
+//   'HTML',
+//   'Node.js',
+// ];
 
 // function unique(arr) {
 //   const newArr = [];
@@ -403,3 +403,18 @@ const words = [
 // }
 // console.log(getUnique(words));
 // =====================================================================================================================
+
+// function ownMap(array, callback) {
+//   const newArray = [];
+
+//   for (let i = 0; i < array.length; i += 1) {
+//     newArray.push(callback(array[i]));
+//   }
+
+//   return newArray;
+// }
+
+// const planets = ['Земля', 'Марс', 'Венера', 'Юпітер'];
+
+// const planetsInUpperCase = ownMap(planets, planet => planet.toUpperCase());
+// console.log('planetsInUpperCase', planetsInUpperCase);
