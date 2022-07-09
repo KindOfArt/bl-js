@@ -342,16 +342,64 @@
 //если цвета нет выводит console.error('Такой цвет не найден');
 //и устанавливает цвет документа красный
 // document.body.style.background = 'red';
-const colors = ['blue', 'yellow', 'olive', 'fuchsia', 'lime', 'aqua', 'maroon'];
-findTheColor('black');
+// const colors = ['blue', 'yellow', 'olive', 'fuchsia', 'lime', 'aqua', 'maroon'];
+// findTheColor('black');
 
-function findTheColor(color) {
-  const inArr = colors.includes(color);
-  if (inArr) {
-    document.body.style.background = color;
-    return;
-  }
+// function findTheColor(color) {
+//   const inArr = colors.includes(color);
+//   if (inArr) {
+//     document.body.style.background = color;
+//     return;
+//   }
 
-  document.body.style.background = 'red';
-  console.error('Такой цвет не найден');
-}
+//   document.body.style.background = 'red';
+//   console.error('Такой цвет не найден');
+// }
+
+// ====================================================================
+//Напишите функцию unique(arr), которая возвращает массив,
+//содержащий только уникальные элементы arr.
+const words = [
+  'HTML',
+  'CSS',
+  'JS',
+  'React',
+  'JS',
+  'CSS',
+  'JS',
+  'Node.js',
+  'JS',
+  'React',
+  'CSS',
+  'React',
+  'HTML',
+  'Node.js',
+];
+
+// function unique(arr) {
+//   const newArr = [];
+//   for (const word of arr) {
+//     if (!newArr.includes(word)) {
+//       newArr.push(word);
+//     }
+//   }
+//   return newArr;
+// }
+// console.log(unique(words));
+// ===============================================================================================================
+// function unique(arr) {
+//   const newArr = [];
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr.indexOf(arr[i]) === i) {
+//       newArr.push(arr[i]);
+//     }
+//   }
+//   return newArr;
+// }
+// console.log(unique(words));
+// =================================================================================================================
+// function getUnique(arr) {
+//   return arr.filter((element, index, arr) => arr.indexOf(element) === index);
+// }
+// console.log(getUnique(words));
+// =====================================================================================================================
