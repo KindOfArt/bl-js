@@ -418,3 +418,26 @@
 
 // const planetsInUpperCase = ownMap(planets, planet => planet.toUpperCase());
 // console.log('planetsInUpperCase', planetsInUpperCase);
+
+// ======================================================
+
+// function ownFilter (arr, callback) {
+//     const newValues = [];
+//     for (let i = 0; i < arr.length; i += 1) {
+//         if (callback(arr[i], i, arr)) {
+//             newValues.push(arr[i]);
+//         }
+//     }
+//     return newValues;
+
+// }
+// const values = [51, -3, 27, 100500, 21, 68, -42, -37, 100001];
+
+// const positiveValues = ownFilter(values, (value) => {
+// return value > 0;
+
+//     // console.log(value);
+//     // console.log(index);
+//     // console.log(arr);
+// });
+// console.log(positiveValues)
