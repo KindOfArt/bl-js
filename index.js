@@ -300,7 +300,6 @@
 //     return undefined;
 // }
 
-
 // const colorPickerOptions = [
 //     { label: 'red', color: '#F44336' },
 //     { label: 'green', color: '#4CAF50' },
@@ -310,9 +309,7 @@
 // ];
 // console.log(ownFind(colorPickerOptions, (option) => { return (option.label === 'blue'); }));
 
-
 // ==============================================================================
-
 
 // const vehicles = [
 //     { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
@@ -337,23 +334,46 @@
 // getAvailableCarNames(vehicles, 10)
 //Получить машины на распродаже и сортировать по убыванию цены
 
-const vehicles = [
-    { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
-    { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
-    { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
-    { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
-    { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
-    { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
-    { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
-    { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
-    { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
-    { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
-];
+// const vehicles = [
+//     { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
+//     { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
+//     { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
+//     { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
+//     { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
+//     { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
+//     { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
+//     { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
+//     { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
+//     { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
+// ];
 
-const getSortedCarsOnSale = cars => {
-    return cars.filter(element => element.onSale).sort((a,b) => b.price - a.price)
-};
+// const getSortedCarsOnSale = cars => {
+//     return cars.filter(element => element.onSale).sort((a,b) => b.price - a.price)
+// };
 
-console.log(getSortedCarsOnSale(vehicles ));
-console.log(getSortedCarsOnSale(vehicles ));
+// console.log(getSortedCarsOnSale(vehicles ));
+// console.log(getSortedCarsOnSale(vehicles ));
 
+//Нужно проверить "same" массивы
+//числа с первого в квадрате равны числам второго
+const a = [121, 144, 18, 161, 19, 144, 19, 11];
+const b = [121, 14641, 20736, 361, 25921, 361, 20736, 361];
+
+function compare(arrey1, arrey2) {
+  if (arrey1.length !== arrey2.length) {
+    return false;
+  }
+  const newArr = arrey1.map(number => number ** 2).sort((a, b) => a - b);
+  const sortedArrey2 = arrey2.sort((a, b) => a - b);
+  console.log(newArr);
+  console.log(sortedArrey2);
+
+  for (let i = 0; i < arrey1.length; i += 1) {
+    if (newArr[i] !== sortedArrey2[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(compare(a, b));
