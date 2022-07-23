@@ -437,41 +437,41 @@
 // - Форма каждый раз должна появляться в разных местах на странице
 // - Цвет формы в рандомном порядке меняется,
 
-const forms = [
-  'width: 100px; height: 100px; border-width: 1px; border-color: #000000',
-  'width: 100px; height: 100px; border-radius: 50%; border-width: 1px; border-color: #000000',
-  'width: 150px; height: 100px; border-width: 1px; border-color: #000000',
-  'width: 200px; height: 100px; border-radius: 100px / 50px;',
-  'width: 150px; height: 100px; transform: skew(20deg);',
-];
-const randomither = max => {
-  return Math.floor(Math.random() * max);
-};
-function getRangomColor() {
-  return `#${getRandomHex()}${getRandomHex()}${getRandomHex()}`;
-}
+// const forms = [
+//   'width: 100px; height: 100px; border-width: 1px; border-color: #000000',
+//   'width: 100px; height: 100px; border-radius: 50%; border-width: 1px; border-color: #000000',
+//   'width: 150px; height: 100px; border-width: 1px; border-color: #000000',
+//   'width: 200px; height: 100px; border-radius: 100px / 50px;',
+//   'width: 150px; height: 100px; transform: skew(20deg);',
+// ];
+// const randomither = max => {
+//   return Math.floor(Math.random() * max);
+// };
+// function getRangomColor() {
+//   return `#${getRandomHex()}${getRandomHex()}${getRandomHex()}`;
+// }
 
-function getRandomHex() {
-  return Math.round(Math.random() * 256)
-    .toString(16)
-    .padStart(2, '0');
-}
+// function getRandomHex() {
+//   return Math.round(Math.random() * 256)
+//     .toString(16)
+//     .padStart(2, '0');
+// }
 
-const container = document.querySelector('.container');
-const element = document.createElement('div');
-// element.style.cssText = forms[0];
-// element.style.background = getRangomColor();
-container.append(element);
+// const container = document.querySelector('.container');
+// const element = document.createElement('div');
+// // element.style.cssText = forms[0];
+// // element.style.background = getRangomColor();
+// container.append(element);
 
-const hadleClick = () => {
-  const index = randomither(forms.length);
-  element.style.cssText = forms[index];
-  element.style.background = getRangomColor();
-  element.style.position = 'absolute';
-  element.style.top = `${randomither(100)}%`
-  element.style.left = `${randomither(100)}%`
-}
+// const hadleClick = () => {
+//   const index = randomither(forms.length);
+//   element.style.cssText = forms[index];
+//   element.style.background = getRangomColor();
+//   element.style.position = 'absolute';
+//   element.style.top = `${randomither(100)}%`
+//   element.style.left = `${randomither(100)}%`
+// }
 
-hadleClick();
+// hadleClick();
 
-element.addEventListener('click', hadleClick)
+// element.addEventListener('click', hadleClick)
