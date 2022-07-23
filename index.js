@@ -384,45 +384,94 @@
 //* Четным li указать красный фон, нечетным -- синим
 //Для выполнения задания используйте createElement
 
-const contRef = document.querySelector('.container');
+// const contRef = document.querySelector('.container');
 
-const ul = document.createElement('ol');
-const input = document.createElement('input');
-const add = document.createElement('button');
-const remove = document.createElement('button');
+// const ul = document.createElement('ol');
+// const input = document.createElement('input');
+// const add = document.createElement('button');
+// const remove = document.createElement('button');
 
-add.textContent = 'add';
-remove.textContent = 'remove';
+// add.textContent = 'add';
+// remove.textContent = 'remove';
 
-contRef.append(input, add, remove, ul);
+// contRef.append(input, add, remove, ul);
 
-add.addEventListener('click', () => {
-  console.log(input.value);
-  if (input.value === '') {
-    return;
-  }
-  const item = document.createElement('li');
-  item.textContent = input.value;
-  ul.append(item);
-  input.value = '';
+// add.addEventListener('click', () => {
+//   console.log(input.value);
+//   if (input.value === '') {
+//     return;
+//   }
+//   const item = document.createElement('li');
+//   item.textContent = input.value;
+//   ul.append(item);
+//   input.value = '';
 
-  // if (ul.childElementCount % 2 === 0) {
-  //   item.style.backgroundColor = 'red';
-  // } else {
-  //   item.style.backgroundColor = 'blue';
-  // }
+//   // if (ul.childElementCount % 2 === 0) {
+//   //   item.style.backgroundColor = 'red';
+//   // } else {
+//   //   item.style.backgroundColor = 'blue';
+//   // }
 
-  const isEven = ul.childElementCount % 2 === 0;
+//   const isEven = ul.childElementCount % 2 === 0;
 
-  item.style.backgroundColor = isEven ? 'red' : 'blue';
-});
+//   item.style.backgroundColor = isEven ? 'red' : 'blue';
+// });
 
-remove.addEventListener('click', () => {
-  const lastItem = ul.lastElementChild;
+// remove.addEventListener('click', () => {
+//   const lastItem = ul.lastElementChild;
 
-  if (!lastItem) {
-    return;
-  }
+//   if (!lastItem) {
+//     return;
+//   }
 
-  lastItem.remove();
-});
+//   lastItem.remove();
+// });
+
+
+
+//Создать небольшую игру:)
+// - Изначально на экране пользователя будет отображаться
+//какая - то форма (круг, квадрат, прямоулольник)
+// - При нажатии на нее в рандомном порядке форма должна
+//меняться на другую
+// - Форма каждый раз должна появляться в разных местах на странице
+// - Цвет формы в рандомном порядке меняется,
+
+const forms = [
+  'width: 100px; height: 100px; border-width: 1px; border-color: #000000',
+  'width: 100px; height: 100px; border-radius: 50%; border-width: 1px; border-color: #000000',
+  'width: 150px; height: 100px; border-width: 1px; border-color: #000000',
+  'width: 200px; height: 100px; border-radius: 100px / 50px;',
+  'width: 150px; height: 100px; transform: skew(20deg);',
+];
+const randomither = max => {
+  return Math.floor(Math.random() * max);
+};
+function getRangomColor() {
+  return `#${getRandomHex()}${getRandomHex()}${getRandomHex()}`;
+}
+
+function getRandomHex() {
+  return Math.round(Math.random() * 256)
+    .toString(16)
+    .padStart(2, '0');
+}
+
+const container = document.querySelector('.container');
+const element = document.createElement('div');
+// element.style.cssText = forms[0];
+// element.style.background = getRangomColor();
+container.append(element);
+
+const hadleClick = () => {
+  const index = randomither(forms.length);
+  element.style.cssText = forms[index];
+  element.style.background = getRangomColor();
+  element.style.position = 'absolute';
+  element.style.top = `${randomither(100)}%`
+  element.style.left = `${randomither(100)}%`
+}
+
+hadleClick();
+
+element.addEventListener('click', hadleClick)
