@@ -22,6 +22,7 @@ section {
 
 .key__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .key__item {
