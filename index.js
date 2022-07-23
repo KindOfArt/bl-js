@@ -356,24 +356,73 @@
 
 //Нужно проверить "same" массивы
 //числа с первого в квадрате равны числам второго
-const a = [121, 144, 18, 161, 19, 144, 19, 11];
-const b = [121, 14641, 20736, 361, 25921, 361, 20736, 361];
+// const a = [121, 144, 18, 161, 19, 144, 19, 11];
+// const b = [121, 14641, 20736, 361, 25921, 361, 20736, 361];
 
-function compare(arrey1, arrey2) {
-  if (arrey1.length !== arrey2.length) {
-    return false;
+// function compare(arrey1, arrey2) {
+//   if (arrey1.length !== arrey2.length) {
+//     return false;
+//   }
+//   const newArr = arrey1.map(number => number ** 2).sort((a, b) => a - b);
+//   const sortedArrey2 = arrey2.sort((a, b) => a - b);
+//   console.log(newArr);
+//   console.log(sortedArrey2);
+
+//   for (let i = 0; i < arrey1.length; i += 1) {
+//     if (newArr[i] !== sortedArrey2[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(compare(a, b));
+
+// Создать маркированный список.
+//Создать кнопки "Add" "Remove", которые будут менять состав списка
+//Создать input с которого будем получать значение, которое будет в li
+//* Четным li указать красный фон, нечетным -- синим
+//Для выполнения задания используйте createElement
+
+const contRef = document.querySelector('.container');
+
+const ul = document.createElement('ol');
+const input = document.createElement('input');
+const add = document.createElement('button');
+const remove = document.createElement('button');
+
+add.textContent = 'add';
+remove.textContent = 'remove';
+
+contRef.append(input, add, remove, ul);
+
+add.addEventListener('click', () => {
+  console.log(input.value);
+  if (input.value === '') {
+    return;
   }
-  const newArr = arrey1.map(number => number ** 2).sort((a, b) => a - b);
-  const sortedArrey2 = arrey2.sort((a, b) => a - b);
-  console.log(newArr);
-  console.log(sortedArrey2);
+  const item = document.createElement('li');
+  item.textContent = input.value;
+  ul.append(item);
+  input.value = '';
 
-  for (let i = 0; i < arrey1.length; i += 1) {
-    if (newArr[i] !== sortedArrey2[i]) {
-      return false;
-    }
+  // if (ul.childElementCount % 2 === 0) {
+  //   item.style.backgroundColor = 'red';
+  // } else {
+  //   item.style.backgroundColor = 'blue';
+  // }
+
+  const isEven = ul.childElementCount % 2 === 0;
+
+  item.style.backgroundColor = isEven ? 'red' : 'blue';
+});
+
+remove.addEventListener('click', () => {
+  const lastItem = ul.lastElementChild;
+
+  if (!lastItem) {
+    return;
   }
-  return true;
-}
 
-console.log(compare(a, b));
+  lastItem.remove();
+});
