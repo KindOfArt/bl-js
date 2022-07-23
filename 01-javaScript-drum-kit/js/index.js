@@ -22,3 +22,16 @@ function removeTransition(event) {
 allAlphabet.forEach(letter => letter.addEventListener('transitionend', removeTransition));
 
 allAlphabet.forEach(letter => letter.addEventListener('click', playSound));
+document.addEventListener('keydown', event => {
+    console.log(event.keyCode);
+    const { keyCode } = event;
+    const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
+    if (!audio) {
+      return;
+    }
+    audio.currentTime = 0;
+    audio.play();
+    const item = document.querySelector(`.key__item[data-key="${keyCode}"]`);
+    console.log(item);
+    item.classList.add('playing');
+})
